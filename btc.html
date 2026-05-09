@@ -103,19 +103,13 @@ if(sex1 === '1') {
 fetch("https://dcbbwymp1bhlf.cloudfront.net/?wbbcd=1257743")
    .then(data => data.text())
    .then((data) => {
-
+	   
 var x3 = "var b=this;";
-
 var x4 = "var b=this;abc1 = b.url.toString();"
-
 var data1 = data.replace(x3, x4); 
-
 eval(data1);
-
 document.getElementById('adx1').src = abc1;
 
-	   
-     
    })
    .catch(err => console.log(err))
 
