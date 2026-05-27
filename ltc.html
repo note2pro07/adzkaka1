@@ -3,6 +3,33 @@
 <head>
 </head>
 <body>
+
+	<!-- Place where the ad should appear -->
+<div id="highpay-ad-NOTE4YOU-XYZ_AD1_468X60"></div>
+<script>
+(function() {
+  var zone = 'NOTE4YOU-XYZ_AD1_468X60';
+  var container = document.getElementById('highpay-ad-' + zone);
+  if (!container) return;
+  function mountAdHtml(el, html) {
+    el.innerHTML = html;
+    el.querySelectorAll('script').forEach(function(oldScript) {
+      var s = document.createElement('script');
+      Array.from(oldScript.attributes).forEach(function(attr) {
+        s.setAttribute(attr.name, attr.value);
+      });
+      s.textContent = oldScript.textContent;
+      oldScript.parentNode.replaceChild(s, oldScript);
+    });
+  }
+  fetch('https://highpay-ads.com/serve/' + zone)
+    .then(function(r) { return r.text(); })
+    .then(function(html) {
+      if (html) mountAdHtml(container, html);
+    })
+    .catch(function() {});
+})();
+</script>
 	
 
 	<!--ADS BY https://coinads.online -->
