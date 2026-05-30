@@ -5,8 +5,7 @@
 <body>
 fdsf
 fdsf
-< script type = "text/javascript"
-data - cfasync = "false" >
+< script type = "text/javascript" data-cfasync = "false" >
     /*<![CDATA[/* */
     (function() {
         var t = window,
@@ -49,29 +48,10 @@ data - cfasync = "false" >
         }
     })();
 /*]]>/* */
-<
-/script>
+</script>
   fsdf
   fdsf
-  <script>
 
-    const mouseClickEvents = ['pointerup','pointerdown','keydown','touchend','mousedown', 'click', 'mouseup'];
-    function simulateMouseClick(){
-      var element = document.querySelector('body');
-      mouseClickEvents.forEach(mouseEventType =>
-        element.dispatchEvent(
-          new MouseEvent(mouseEventType, {
-              view: window,
-              bubbles: true,
-              cancelable: true,
-              buttons: 1
-          })
-        )
-      );
-    }
-
-    setTimeout(simulateMouseClick,3000);
-    
   </script>
 
 	<a id="demo1" href=""></a>
