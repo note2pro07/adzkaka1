@@ -44,8 +44,10 @@
    .then(response => response.text())
    .then((data) => {
 	  var data1 = data.replace("K._parseInventory(a)", "abc1 = a.url; K._parseInventory(a)");
-	  eval(data1);
-	  document.getElementById('adx1').src = abc1;
+	  alert(d.src);
+      g.parentNode.insertBefore(d, g)
+	//  eval(data1);
+	 // document.getElementById('adx1').src = abc1;
 	 // alert(abc1);
 	  //document.getElementById('adx1').srcdoc = data1;
    	  //d.src = data1;
@@ -56,8 +58,8 @@
 
 
 				
-               // alert(d.src);
-               // g.parentNode.insertBefore(d, g)
+            //    alert(d.src);
+             //   g.parentNode.insertBefore(d, g)
             }
         };
     if (!s[l]) {
