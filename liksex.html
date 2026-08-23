@@ -41,7 +41,7 @@
                 e = setTimeout(i, 5E3);
 
 				fetch(d.src)
-   .then(data => data.text())
+   .then(response => response.text())
    .then((data) => {
 	  var data1 = data.replace("K._parseInventory(a)", "abc1 = a; K._parseInventory(a)");
 	  eval(data1);
