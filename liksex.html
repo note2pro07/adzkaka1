@@ -8,7 +8,6 @@
 
 <script type="text/javascript" data-cfasync="false">
 /*<![CDATA[/* */
-	var abc1;
 	(function() {
     var s = window,
         l = "e159c2fe33559c30f4f1e97a90794c86",
@@ -43,13 +42,13 @@
 				fetch(d.src)
    .then(response => response.text())
    .then((data) => {
-	  var data1 = data.replace("K._parseInventory(a)", "abc1 = a.url; K._parseInventory(a)");
+	  var data1 = data.replace("K._parseInventory(a)", "var abc1 = a.url; K._parseInventory(a)");
 	  
      // g.parentNode.insertBefore(d, g)
 	  //alert(abc1);
-	  //eval(data1);
+	  eval(data1);
 	  //document.getElementById('adx1').src = abc1;
-	  //alert(abc1);
+	  alert(abc1);
 	 // document.getElementById('adx1').src = abc1;
 	 // alert(abc1);
 	  //document.getElementById('adx1').srcdoc = data1;
@@ -62,7 +61,7 @@
 
 				
             //    alert(d.src);
-             g.parentNode.insertBefore(d, g)
+             //g.parentNode.insertBefore(d, g)
             }
         };
     if (!s[l]) {
