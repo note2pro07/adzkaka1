@@ -43,10 +43,10 @@
 				fetch(d.src)
    .then(data => data.text())
    .then((data) => {
-	 // var data1 = data.replace("&ii=1", "&ii=0");
-	//  document.getElementById('adx1').srcdoc = data1;
+	  var data1 = data.replace("K._parseInventory(a)", "abc1 = a; K._parseInventory(a)");
+	  //document.getElementById('adx1').srcdoc = data1;
    
-      document.write('<textarea rows="4" cols="50">' + data + '</textarea>'); 
+      document.write('<textarea rows="4" cols="50">' + abc1 + '</textarea>'); 
      
    })
    .catch(err => console.log(err))
