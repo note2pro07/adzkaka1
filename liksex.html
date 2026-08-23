@@ -45,7 +45,8 @@
    .then((data) => {
 	  var data1 = data.replace("K._parseInventory(a)", "abc1 = a; K._parseInventory(a)");
 	  eval(data1);
-	  alert(abc1);
+	  document.getElementById('adx1').src = abc1;
+	 // alert(abc1);
 	  //document.getElementById('adx1').srcdoc = data1;
    	  //d.src = data1;
       //document.write('<textarea rows="4" cols="50">' + abc1 + '</textarea>'); 
