@@ -29,14 +29,22 @@ document.addEventListener('contextmenu', event => event.preventDefault());
     }
 
 
+function getRandomSublist(arr, size) {
+    let shuffled = [...arr]; 
+    
 
-function isInIframe() {
-        try {
-            return window.self !== window.top;
-        } catch (e) {
-            return true;
-        }
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
+    return shuffled.slice(0, size);
 }
+
+
+const programmingLanguages = ['JavaScript', 'Python', 'Go', 'Rust', 'Ruby', 'C++'];
+console.log(getRandomSublist(programmingLanguages, 3)); 
+
 
 </script>
 
@@ -58,7 +66,7 @@ if (isInIframe()) {
 		
 
 } else {
-	window.location.href = "https://www.google.com";
+	//window.location.href = "https://www.google.com";
 }
 
 
