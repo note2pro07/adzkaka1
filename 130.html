@@ -47,112 +47,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
     }
 
 
-function getRandomSublist(arr, size) {
-    let shuffled = [...arr]; 
-    
-
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    
-    return shuffled.slice(0, size);
-}
-
-
-const lis1 = [
-							  'https://vazza.site/sex.html?sex=1', 
-							  'https://vazza.site/sex.html?sex=2', 
-							  'https://vazza.site/sex.html?sex=3', 
-							  'https://vazza.site/sex.html?sex=4', 
-							  'https://vazza.site/sex.html?sex=5',
-							  'https://vazza.site/sex.html?sex=6', 
-							  'https://vazza.site/sex.html?sex=7', 
-							  'https://vazza.site/sex.html?sex=8', 
-							  'https://vazza.site/sex.html?sex=9', 
-							  'https://vazza.site/sex.html?sex=10',
-	
-								'https://xinxao.site/sex.html?sex=1', 
-							  'https://xinxao.site/sex.html?sex=2', 
-							  'https://xinxao.site/sex.html?sex=3', 
-							  'https://xinxao.site/sex.html?sex=4', 
-							  'https://xinxao.site/sex.html?sex=5',
-							  'https://xinxao.site/sex.html?sex=6', 
-							  'https://xinxao.site/sex.html?sex=7', 
-							  'https://xinxao.site/sex.html?sex=8', 
-							  'https://xinxao.site/sex.html?sex=9', 
-							  'https://xinxao.site/sex.html?sex=10',
-
-
-								'https://vazza.site/sex.html?sex=1&a=a', 
-							  'https://vazza.site/sex.html?sex=2&a=a', 
-							  'https://vazza.site/sex.html?sex=3&a=a', 
-							  'https://vazza.site/sex.html?sex=4&a=a', 
-							  'https://vazza.site/sex.html?sex=5&a=a',
-							  'https://vazza.site/sex.html?sex=6&a=a', 
-							  'https://vazza.site/sex.html?sex=7&a=a', 
-							  'https://vazza.site/sex.html?sex=8&a=a', 
-							  'https://vazza.site/sex.html?sex=9&a=a', 
-							  'https://vazza.site/sex.html?sex=10&a=a',
-
-								'https://xinxao.site/sex.html?sex=1&a=a', 
-							  'https://xinxao.site/sex.html?sex=2&a=a', 
-							  'https://xinxao.site/sex.html?sex=3&a=a', 
-							  'https://xinxao.site/sex.html?sex=4&a=a', 
-							  'https://xinxao.site/sex.html?sex=5&a=a',
-							  'https://xinxao.site/sex.html?sex=6&a=a', 
-							  'https://xinxao.site/sex.html?sex=7&a=a', 
-							  'https://xinxao.site/sex.html?sex=8&a=a', 
-							  'https://xinxao.site/sex.html?sex=9&a=a', 
-							  'https://xinxao.site/sex.html?sex=10&a=a',
-
-
-								'https://vazza.site/sex.html?sex=1&a=b', 
-							  'https://vazza.site/sex.html?sex=2&a=b', 
-							  'https://vazza.site/sex.html?sex=3&a=b', 
-							  'https://vazza.site/sex.html?sex=4&a=b', 
-							  'https://vazza.site/sex.html?sex=5&a=b',
-							  'https://vazza.site/sex.html?sex=6&a=b', 
-							  'https://vazza.site/sex.html?sex=7&a=b', 
-							  'https://vazza.site/sex.html?sex=8&a=b', 
-							  'https://vazza.site/sex.html?sex=9&a=b', 
-							  'https://vazza.site/sex.html?sex=10&a=b',
-
-								'https://xinxao.site/sex.html?sex=1&a=b', 
-							  'https://xinxao.site/sex.html?sex=2&a=b', 
-							  'https://xinxao.site/sex.html?sex=3&a=b', 
-							  'https://xinxao.site/sex.html?sex=4&a=b', 
-							  'https://xinxao.site/sex.html?sex=5&a=b',
-							  'https://xinxao.site/sex.html?sex=6&a=b', 
-							  'https://xinxao.site/sex.html?sex=7&a=b', 
-							  'https://xinxao.site/sex.html?sex=8&a=b', 
-							  'https://xinxao.site/sex.html?sex=9&a=b', 
-							  'https://xinxao.site/sex.html?sex=10&a=b',
-
-
-								'https://vazza.site/sex.html?sex=1&a=c', 
-							  'https://vazza.site/sex.html?sex=2&a=c', 
-							  'https://vazza.site/sex.html?sex=3&a=c', 
-							  'https://vazza.site/sex.html?sex=4&a=c', 
-							  'https://vazza.site/sex.html?sex=5&a=c',
-							  'https://vazza.site/sex.html?sex=6&a=c', 
-							  'https://vazza.site/sex.html?sex=7&a=c', 
-							  'https://vazza.site/sex.html?sex=8&a=c', 
-							  'https://vazza.site/sex.html?sex=9&a=c', 
-							  'https://vazza.site/sex.html?sex=10&a=c',
-
-								'https://xinxao.site/sex.html?sex=1&a=c', 
-							  'https://xinxao.site/sex.html?sex=2&a=c', 
-							  'https://xinxao.site/sex.html?sex=3&a=c', 
-							  'https://xinxao.site/sex.html?sex=4&a=c', 
-							  'https://xinxao.site/sex.html?sex=5&a=c',
-							  'https://xinxao.site/sex.html?sex=6&a=c', 
-							  'https://xinxao.site/sex.html?sex=7&a=c', 
-							  'https://xinxao.site/sex.html?sex=8&a=c', 
-							  'https://xinxao.site/sex.html?sex=9&a=c', 
-							  'https://xinxao.site/sex.html?sex=10&a=c',
-
-							 ];
 
 </script>
 
@@ -163,59 +57,10 @@ const lis1 = [
 	<div style="display:none;">	
 				
 			<iframe id="adx0" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx1" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx2" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx3" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx4" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx5" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx6" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx7" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx8" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx9" src="" height="768" width="1366" ></iframe>
-
-
-			<iframe id="adx10" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx11" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx12" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx13" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx14" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx15" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx16" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx17" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx18" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx19" src="" height="768" width="1366" ></iframe>
-
-
-			<iframe id="adx20" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx21" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx22" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx23" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx24" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx25" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx26" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx27" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx28" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx29" src="" height="768" width="1366" ></iframe>
-
-
-			<iframe id="adx30" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx31" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx32" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx33" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx34" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx35" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx36" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx37" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx38" src="" height="768" width="1366" ></iframe>
-			<iframe id="adx39" src="" height="768" width="1366" ></iframe>
+			
 
 <script>
-			const lis2 = getRandomSublist(lis1, 40);
-
-			for (let i = 0; i < lis2.length; i++) {
-				document.getElementById("adx" + i).src = lis2[i];
-			}
-
+			
 </script>
 
 
